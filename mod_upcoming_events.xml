@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>Upcoming Events</name>
+	<author>William Deacon</author>
+	<creationDate>April 30, 2015</creationDate>
+	<authorEmail>wddeacon@gmail.com</authorEmail>
+	<version>0.0.1</version>
+	<description>A simple upcoming events calendar module that integrates with Google Calendar.</description>
+
+	<files>
+		<filename module="mod_westsenators_calendar">mod_upcoming_events.php</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<media>
+	</media>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="Calendar Options">
+				<field name="calendar_textcolor" type="color" default="#eee"
+					label="Calendar Date Text Color"
+					description="Color for the text on the date chip in the 'upcoming events' list." />
+				<field name="calendar_bgcolor1" type="color" default="#eee"
+					label="Calendar Date Month Color"
+					description="Color for the 'month' on the date chip in the 'upcoming events' list." />
+				<field name="calendar_bgcolor2" type="color" default="#eee"
+					label="Calendar Date Day Color"
+					description="Color for the 'day' on the date chip in the 'upcoming events' list." />
+				<field
+					name="max_events"
+					type="integer"
+					label="Number Of Events To Display"
+					description="The maximum number of events to display in the list.  The actual number of events may be fewer than this value if there are not enough events on the calendar."
+					default="7"
+					first="1"
+					last="10"
+					step="1"
+				/>
+			</fieldset>
+			<fieldset name="google" label="Google Calendar Integration">
+				<field
+					class="required"
+					name="google_api_key"
+					type="text"
+					label="Google Calendar API Key"
+					description="Your Google Calendar API key.  This value should stay PRIVATE to keep people from abusing the Google API using your quota.  See https://console.developers.google.com/ for information on how to establish an API key if you do not already have one."
+				>
+				</field>
+				<field
+					class="required"
+					name="google_calendar_id"
+					type="text"
+					label="Google Calendar ID"
+					description="The public ID of the Google Calendar you want displayed in this module.  Make sure that it is set to 'public'."
+				>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+			
+		</fields>
+	</config>
+
+</extension>
