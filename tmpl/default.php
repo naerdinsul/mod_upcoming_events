@@ -40,7 +40,7 @@ JHtml::_('stylesheet', 'mod_upcoming_events/upcoming_events.css', array(), true)
 			$month = $eventStart->format("M");
 			$day = $eventStart->format("j");
 			$dateDesc = $eventStart->format("F jS");
-			if( !$allDay ) $dateDesc .= ', ' . $eventStart->format("H:ma");
+			if( !$allDay ) $dateDesc .= ', ' . $eventStart->format("g:ia");
 
 			// Output final HTML
 			echo( '<div class="upcoming-event">' );
