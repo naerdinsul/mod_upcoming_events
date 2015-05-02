@@ -4,7 +4,10 @@
 }
 
 .upcoming-event {
-	clear: both;
+	background-color: rgb( 220, 220, 220 );
+	overflow: hidden;
+	margin-bottom: 5px;
+	padding: 10px;
 }
 
 .upcoming-event-block {
@@ -14,7 +17,7 @@
 	text-align: center;
 	width: 42px;
 	margin-right: 10px;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
 	box-shadow: 0 0 15px rgba( 0, 0, 0, 0.5 );
 }
 
