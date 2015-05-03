@@ -17,16 +17,19 @@
 	
 	<config>
 		<fields name="params">
-			<fieldset name="options" label="Calendar Options">
-				<field name="calendar_textcolor" type="color" default="#eee"
+			<fieldset name="options" label="Display Options">
+				<field name="calendar_textcolor" type="color" default="#FFF"
 					label="Calendar Date Text Color"
 					description="Color for the text on the date chip in the 'upcoming events' list." />
-				<field name="calendar_bgcolor1" type="color" default="#eee"
+				<field name="calendar_bgcolor1" type="color" default="#DD5522"
 					label="Calendar Date Month Color"
 					description="Color for the 'month' on the date chip in the 'upcoming events' list." />
-				<field name="calendar_bgcolor2" type="color" default="#eee"
+				<field name="calendar_bgcolor2" type="color" default="#FF9E7A"
 					label="Calendar Date Day Color"
 					description="Color for the 'day' on the date chip in the 'upcoming events' list." />
+				<field name="calendar_highlight" type="color" default="#DDDDDD"
+					label="Calendar Date Highlight Color"
+					description="Color for the background of entries in the 'upcoming events' list." />
 				<field
 					name="max_events"
 					type="integer"

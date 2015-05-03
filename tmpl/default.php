@@ -9,8 +9,16 @@
 
 defined('_JEXEC') or die;
 
+$doc = JFactory::getDocument();
+
 // Add module stylesheet
 JHtml::_('stylesheet', 'mod_upcoming_events/upcoming_events.css', array(), true);
+
+// Get template colors
+$textcolor = $params->get('calendar_textcolor', '#FFF');
+$bgcolor1 = $params->get('calendar_bgcolor1', '#DD5522');
+$bgcolor2 = $params->get('calendar_bgcolor2', '#FF9E7A');
+$highlight = $params->get('calendar_highlight', '#DDDDDD');
 
 ?>
 <div class="upcoming-event-calendar<?php echo $moduleclass_sfx ?>" >
@@ -43,10 +51,10 @@ JHtml::_('stylesheet', 'mod_upcoming_events/upcoming_events.css', array(), true)
 			if( !$allDay ) $dateDesc .= ', ' . $eventStart->format("g:ia");
 
 			// Output final HTML
-			echo( '<div class="upcoming-event">' );
-			echo( '<div class="upcoming-event-block">' );
-			echo( '<div class="upcoming-event-month">' . $month . '</div>' );
-			echo( '<div class="upcoming-event-day">' . $day . '</div>' );
+			echo( '<div class="upcoming-event" style="background-color: '.$highlight.'">' );
+			echo( '<div class="upcoming-event-block" style="color: '.$textcolor.'">' );
+			echo( '<div class="upcoming-event-month" style="background-color: '.$bgcolor1.'">' . $month . '</div>' );
+			echo( '<div class="upcoming-event-day" style="background-color: '.$bgcolor2.'">' . $day . '</div>' );
 			echo( '</div>' );
 			echo( '<div class="upcoming-event-date">' . $dateDesc . '</div>' );
 			echo( '<div class="upcoming-event-desc">' . $summary . '</div>' );

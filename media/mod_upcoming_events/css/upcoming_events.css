@@ -4,7 +4,6 @@
 }
 
 .upcoming-event {
-	background-color: rgb( 220, 220, 220 );
 	overflow: hidden;
 	margin-bottom: 5px;
 	padding: 10px;
@@ -13,23 +12,19 @@
 .upcoming-event-block {
 	display: block;
 	float: left;
-	color: #FFF;
 	text-align: center;
 	width: 42px;
 	margin-right: 10px;
-	/* margin-bottom: 10px; */
 	box-shadow: 0 0 15px rgba( 0, 0, 0, 0.5 );
 }
 
 .upcoming-event-month {
-	background: #dd5426;
 	height: 18px;
 	line-height: 1.3;
 	text-transform: uppercase;
 }
 
 .upcoming-event-day {
-	background: #FF9E7D;
 	font-size: 26px;
 	font-weight: bold;
 	height: 29px;
@@ -37,7 +32,7 @@
 }
 
 .upcoming-event-date {
-	line-weight: 1.5em;
+	line-height: 1.5em;
 	font-weight: bold;
 	font-style: italic;
 }
