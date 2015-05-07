@@ -4,15 +4,16 @@
 	<author>William Deacon</author>
 	<creationDate>April 30, 2015</creationDate>
 	<authorEmail>wddeacon@gmail.com</authorEmail>
-	<version>0.0.1</version>
+	<version>0.9.9</version>
 	<description>A simple upcoming events calendar module that integrates with Google Calendar.</description>
 
 	<files>
-		<filename module="mod_westsenators_calendar">mod_upcoming_events.php</filename>
+		<filename module="mod_upcoming_events">mod_upcoming_events.php</filename>
 		<folder>tmpl</folder>
 	</files>
 
-	<media>
+	<media folder="media" destination="mod_upcoming_events">
+		<folder>css</folder>
 	</media>
 	
 	<config>
